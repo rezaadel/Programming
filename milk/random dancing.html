@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+	<html>
+	<body>
+	<canvas id="myCanvas" width="1400" height="800"></canvas>
+	<script>
+    function start(){
+var roll = Math.floor(Math.random() *3+1);
+	if (roll == 1){
+	      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      context.beginPath();
+      context.rect(100, 50, 100, 50);
+      context.fillStyle = 'red';
+      context.fill();
+      context.lineWidth = 7;
+      context.strokeStyle = 'red';
+      context.stroke();
+	}
+	if (roll == 2){
+		      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      context.beginPath();
+      context.rect(188, 50, 100, 50);
+      context.fillStyle = 'blue';
+      context.fill();
+      context.lineWidth = 7;
+      context.strokeStyle = 'blue';
+      context.stroke();
+	  
+}
+}	
+	start();
+	</script>
+    </body>
+</html>

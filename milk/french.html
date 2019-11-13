@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body data-rsssl=1>
+    <canvas id="myCanvas" width="800" height="800"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      context.beginPath();
+      context.rect(188, 300, 400, 100);
+      context.fillStyle = 'red';
+      context.fill();
+      context.lineWidth = 7;
+	  var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      context.beginPath();
+      context.rect(188, 50, 400, 100);
+      context.fillStyle = 'blue';
+      context.fill();
+      context.lineWidth = 7;
+    </script>
+  </body>
+</html>      

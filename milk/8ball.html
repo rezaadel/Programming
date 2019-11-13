@@ -1,0 +1,77 @@
+
+<html>
+<head>
+<title>Magic 8 Ball</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/7666c7e4765f71aa338f37e94853d4cc7ed720a0/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Magic 8 Ball</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+
+<script>
+window.onload = function() {
+    /* This program draws a magic 8 ball on the screen
+ * and shakes it every 2 seconds.
+ * Shaking means it changes the number and color of the ball.
+ *
+ * To do this, we set a timer because we can't use a loop because
+ * you can't set a time delay in a loop.
+ */
+var RADIUS = 120;
+var FONT = "48pt Arial";
+var circle;
+var number;
+function start(){
+	// create the circle and number and add to the screen
+	circle = new Circle(RADIUS);
+	circle.setPosition(getWidth()/2, getHeight()/2);
+	add(circle);
+	number = new Text(8, FONT);
+	var x = getWidth()/2 - number.getWidth()/2;
+	var y = getHeight()/2 + number.getHeight()/2;
+	number.setPosition(x, y);
+	number.setColor(Color.white);
+	add(number);
+	/* Set a timer to call the shake function ever 2 seconds */
+	setTimer(shake, 2000);
+}
+/* shake sets the text of number to a random number
+ * and changes the color of the circle to a random
+ * color.
+ *
+ * Note how it does not create a new Circle or new Text.
+ * It just uses the ones we created in the start function.
+ */
+function shake() {
+	var random_number = Randomizer.nextInt(1, 9);
+	number.setText(random_number);
+	circle.setColor(Randomizer.nextColor());
+}
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>

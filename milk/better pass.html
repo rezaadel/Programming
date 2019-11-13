@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Snake Eyes</title>
+</head>
+
+<body>
+<h1>Password</h1>
+<script>
+var SENTINEL = ("pASSword");
+
+function start(){	
+		while(true){
+			var pass = prompt("Please Enter Your Password");
+			
+			if (pass == SENTINEL){
+				break;
+			} else {
+				prompt("Sorry that is in incorect you MonKEY");
+			}
+		}
+		document.write("You have Cracked the Password");
+}
+start();
+</script>
+</body>
+
+</html>
+

@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+  <body>
+    <script>
+	function start(){
+	var todayHoliday = prompt ("Is today a holiday?");
+	todayHoliday = (todayHoliday == "true");
+	var todayWeekday = prompt ("Is today a weekday?");
+	todayWeekday = (todayWeekday == "false");
+	schoolOut = todayHoliday && todayWeekday;
+	document.write ("You have no school today: " + schoolOut);
+	
+}
+start();
+
+    </script>
+  </body>
+</html> 
+

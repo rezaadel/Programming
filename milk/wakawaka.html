@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WAKAKAKAKAAKA</title>
+</head>
+<body data-rsssl=1>
+<canvas id="myCanvas" width="1000" height="600"></canvas>
+<body>
+<script>
+
+function wakaWaka(){	
+	drawGhost(300, 200, "blue");
+	
+	drawGhost(450, 124, "red");
+	
+	drawGhost(600, 146, "yellow");
+	
+}
+wakaWaka();
+
+
+
+function drawGhost(centerX, centerY, color){
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.fillStyle = color;
+ctx.fillRect(centerX, centerY, 50, 100);
+ctx.beginPath();
+
+ctx.arc(centerX,centerY + 50 , 50, 0, 2 * Math.PI);
+ctx.fillStyle = color
+ctx.fill();
+ctx.beginPath();
+
+ctx.arc(centerX + 30,centerY + 30 , 30, 0, 2 * Math.PI);
+ctx.fillStyle = color
+ctx.fill();
+ctx.beginPath();
+
+ctx.arc(centerX + 30,centerY + 60 , 30, 0, 2 * Math.PI);
+ctx.fillStyle = color
+ctx.fill();
+ctx.beginPath();
+
+ctx.arc(centerX + 30,centerY + 60 , 30, 0, 2 * Math.PI);
+ctx.fillStyle = color
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(centerX,centerY + 60 , 10, 0, 2 * Math.PI);
+ctx.fillStyle = "white"
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(centerX,centerY + 40 , 10, 0, 2 * Math.PI);
+ctx.fillStyle = "white"
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(centerX,centerY + 60 , 5, 0, 2 * Math.PI);
+ctx.fillStyle = "blue"
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(centerX,centerY + 40 , 5, 0, 2 * Math.PI);
+ctx.fillStyle = "blue"
+ctx.fill();
+
+}
+
+
+</script>
+</body>
+
+</html>
+

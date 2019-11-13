@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>stop light</title>
+</head>
+<body data-rsssl=1>
+<canvas id="myCanvas" width="578" height="200"></canvas>
+<body>
+<script>
+
+function start(){	
+	drawBox(150, 150, 20, 20);
+	
+	drawCircle(40, 'red', 100, 100);
+	
+	drawCircle(40, 'green', 100, 150);
+	
+	drawCircle(40, 'blue', 100, 130);
+	
+}
+start();
+
+function drawCircle(a, b, c, d){
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.fillstyle = 
+ctx.arc(a, b, c, d, 2 * Math.PI);
+ctx.stroke();
+	
+}
+
+function drawBox(a, b, c, d){
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.rect(a, b, c, d);
+ctx.stroke();
+}
+</script>
+</body>
+
+</html>
+

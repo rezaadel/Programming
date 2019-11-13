@@ -1,0 +1,77 @@
+
+<html>
+<head>
+<title>Growing Circle</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/7666c7e4765f71aa338f37e94853d4cc7ed720a0/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+pre {
+    border: 1px solid black;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    background-color: #F5F5F5;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Growing Circle</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+<pre id="console"></pre>
+
+<script>
+window.onload = function() {
+    /* Constants */
+var START_RADIUS = 1;
+var INCREMENT = 1;
+var CHANGE_COLORS_AT = 10;
+var circle;
+var circle = new Circle(START_RADIUS);
+
+function grow(){
+	setTimer(grow, 69);
+	add (circle);
+	start();
+}
+	grow();
+
+
+function start(){
+	if(START_RADIUS % CHANGE_COLORS_AT == 0){
+		circle.setColor(Randomizer.nextColor());
+	}	
+	if (START_RADIUS == 250){
+		resizeTimeout(start);
+	}
+		circle.setPosition(250, 250);
+		circle.setRadius(START_RADIUS);
+		circle.setRadius(START_RADIUS ++);
+	
+	
+}
+    if (typeof start === 'function') {
+        start();
+    }
+start();
+}
+</script>
+
+</body>
+</html>

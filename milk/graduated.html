@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+  <body>
+    <script>
+	function start(){
+	var CreditNumber = prompt ("How many credits do you have?");
+	CreditNumber = (CreditNumber == "true");
+	var takenClasses = prompt ("did you take the required classes");
+	takenClasses = (takenClasses == "true");
+	canGraduate = takenClasses && CreditNumber;
+	document.write ("You will Graduate: " + canGraduate);
+	
+}
+start();
+
+    </script>
+  </body>
+</html> 
+

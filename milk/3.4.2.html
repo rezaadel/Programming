@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Random Circles</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/7666c7e4765f71aa338f37e94853d4cc7ed720a0/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Paint Splatter</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+
+<script>
+window.onload = function() {
+var MAX_RADIUS = 100;
+var MIN_RADIUS = 5
+var MAX_CIRCLES = 1;
+var counter = 0;
+function start(){
+	setTimer(loop, 500);
+}
+function draw(color){
+	drawCircle(Randomizer.nextInt(MIN_RADIUS, MAX_RADIUS),
+			   color,
+			   Randomizer.nextInt(0, getWidth()),
+			   Randomizer.nextInt(0, getHeight()));
+	
+	counter++;
+	
+	if(counter == MAX_CIRCLES){
+		stopTimer(draw);
+	}
+}
+function drawCircle(radius, color, x, y){
+	var circle = new Circle(radius);
+	circle.setColor(color);
+	circle.setPosition(x, y);
+	add(circle);
+}
+    if (typeof start === 'function') {
+        start();
+    }
+	
+function loop(){
+	color = Randomizer.nextColor();
+	for(var i = 0;i < 20; i++){
+		draw(color);
+}	
+}
+};
+</script>
+
+</body>
+</html>

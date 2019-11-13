@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DO DO DOOO</title>
+</head>
+<body data-rsssl=1>
+<canvas id="myCanvas" width="1000" height="600"></canvas>
+<body>
+<script>
+
+	// i am creating a pokeball pez dispenser with 5 circles, 2 lines, and a blue rectangle
+
+function drawChoo(){
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+ctx.beginPath();
+ctx.moveTo(1000, 600);
+ctx.lineTo(0, 600);
+ctx.fillStyle = "black";
+ctx.stroke();
+
+
+ctx.lineWidth = 5;
+
+ctx.beginPath();
+ctx.fillStyle = "blue";
+ctx.fillRect(480, 150, 80, 500);
+
+ctx.beginPath();
+ctx.arc(525, 100 , 70, 0, 2 * Math.PI);
+ctx.fillStyle = "red";
+ctx.fill();
+ctx.stroke();
+ctx.beginPath();
+
+ctx.beginPath();
+ctx.arc(525, 100 , 70, 0, Math.PI);
+ctx.fillStyle = "white";
+ctx.fill();
+ctx.stroke();
+ctx.beginPath();
+
+ctx.beginPath();
+ctx.arc(525, 100 , 20, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.beginPath();
+
+ctx.arc(500, 80 , 15, 0, 2 * Math.PI);
+ctx.fillStyle = "red";
+ctx.fill();
+ctx.beginPath();
+
+ctx.arc(550, 80 , 15, 0, 2 * Math.PI);
+ctx.fillStyle = "red";
+ctx.fill();
+ctx.beginPath();
+
+ctx.beginPath();
+ctx.arc(525, 100 , 25, 0, 2 * Math.PI);
+ctx.fillStyle = "white";
+ctx.fill();
+ctx.stroke();
+ctx.beginPath();
+
+ctx.beginPath();
+ctx.arc(525, 100 , 15, 0, 2 * Math.PI);
+ctx.fillStyle = "black";
+ctx.fill();
+ctx.stroke();
+ctx.beginPath();
+
+
+
+
+
+}
+
+drawChoo();
+
+</script>
+</body>
+
+</html>
+

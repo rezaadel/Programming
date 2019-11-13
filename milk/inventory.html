@@ -1,0 +1,32 @@
+<DOCTYPE html>
+<html>
+<head>
+<title>Inventory</title>
+</head>
+
+<body>
+<script>
+var STARTING_ITEMS_IN_INVENTORY = 20;
+var SENTINEL = 0;
+
+function start(){
+
+
+while(STARTING_ITEMS_IN_INVENTORY > 0){
+var itemsBought = prompt("How many items would you like to buy? We have " + STARTING_ITEMS_IN_INVENTORY + " in our inventory.");
+document.write("Thank you for purchasing, we now have " + (STARTING_ITEMS_IN_INVENTORY = STARTING_ITEMS_IN_INVENTORY - itemsBought) + " items left." + "<br>");
+
+if(itemsBought > SENTINEL){
+
+if(STARTING_ITEMS_IN_INVENTORY - itemsBought == SENTINEL){
+document.write("We are out of items now, sorry!");
+break;
+
+}
+}
+}
+}
+start();
+</script>
+</body>
+</html>
